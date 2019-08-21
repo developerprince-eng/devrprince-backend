@@ -1,8 +1,8 @@
 import crypto from 'crypto'
-import bcrypt from 'bcrypt'
 import mongoose, { Schema } from 'mongoose'
 import mongooseKeywords from 'mongoose-keywords'
 import { env } from '../../config'
+const bcrypt = require('bcryptjs')
 
 const roles = ['user', 'admin']
 
