@@ -5,6 +5,12 @@
 - [Auth](#auth)
 	- [Authenticate](#authenticate)
 	
+- [Blogs](#blogs)
+	- [Create blogs](#create-blogs)
+	- [Delete blogs](#delete-blogs)
+	- [Retrieve blogs](#retrieve-blogs)
+	- [Update blogs](#update-blogs)
+	
 - [PasswordReset](#passwordreset)
 	- [Send email](#send-email)
 	- [Submit password](#submit-password)
@@ -40,6 +46,76 @@
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | access_token			| String			|  <p>Master access_token.</p>							|
+
+# Blogs
+
+## Create blogs
+
+
+
+	POST /blogs
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| title			| 			|  <p>Blogs's title.</p>							|
+| category			| 			|  <p>Blogs's category.</p>							|
+| likes			| 			|  <p>Blogs's likes.</p>							|
+| dislikes			| 			|  <p>Blogs's dislikes.</p>							|
+| content			| 			|  <p>Blogs's content.</p>							|
+| image_url			| 			|  <p>Blogs's image_url.</p>							|
+
+## Delete blogs
+
+
+
+	DELETE /blogs/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+
+## Retrieve blogs
+
+
+
+	GET /blogs
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| q			| String			| **optional** <p>Query to search.</p>							|
+| page			| Number			| **optional** <p>Page number.</p>							|
+| limit			| Number			| **optional** <p>Amount of returned items.</p>							|
+| sort			| String[]			| **optional** <p>Order of returned items.</p>							|
+| fields			| String[]			| **optional** <p>Fields to be returned.</p>							|
+
+## Update blogs
+
+
+
+	PUT /blogs/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| title			| 			|  <p>Blogs's title.</p>							|
+| category			| 			|  <p>Blogs's category.</p>							|
+| likes			| 			|  <p>Blogs's likes.</p>							|
+| dislikes			| 			|  <p>Blogs's dislikes.</p>							|
+| content			| 			|  <p>Blogs's content.</p>							|
+| image_url			| 			|  <p>Blogs's image_url.</p>							|
 
 # PasswordReset
 
